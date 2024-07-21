@@ -1,12 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./src/output.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Diane</title>
-</head>
-<body>
-    
-</body>
+    <script
+      src="https://kit.fontawesome.com/a8c57682fc.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="min-h-screen">
+    <p class="bg-slate-900 p-1 text-center text-gray-300">
+      Get 25% Off this summer Sale. Grap it fast !
+      <span class="font-bold text-white"
+        >15<small>H</small>45<small>M</small>37<small>S</small></span
+      >
+    </p>
+    <div class="container mx-auto mt-5">
+      <header class="flex items-center justify-between">
+        <nav>
+          <ul class="flex gap-x-4">
+            <li class="cursor-pointer">Man</li>
+            <li class="cursor-pointer">Woman</li>
+            <li class="cursor-pointer">Kids</li>
+            <li class="cursor-pointer">cadeau</li>
+          </ul>
+        </nav>
+        <div>
+          <h1 class="text-4xl font-bold">Diane</h1>
+        </div>
+        <nav>
+          <ul class="flex items-center gap-x-5">
+            <li class="cursor-pointer">
+              <i class="fa-solid fa-magnifying-glass text-xl"></i>
+            </li>
+            <li class="cursor-pointer">
+              <i class="fa-solid fa-bag-shopping text-xl"></i>
+            </li>
+            <li class="cursor-pointer">
+              <i class="fa-solid fa-right-from-bracket text-xl"></i>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div
+        class="flex h-96 bg-cover bg-center items-end my-5 rounded-3xl bg-[url('./assets/hero.jpg')] p-8"
+      >
+        <section class="text-white flex-auto">
+          <h2 class="text-2xl uppercase">diane nature collection</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </section>
+        <button class="rounded-lg bg-white px-4 py-2">Buy now</button>
+      </div>
+    </div>
+  </body>
 </html>
