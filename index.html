@@ -20,6 +20,7 @@
       src="https://kit.fontawesome.com/a8c57682fc.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./src/scripts.js" defer></script>
   </head>
   <body class="min-h-screen">
     <p class="bg-slate-900 p-1 text-center text-gray-300">
@@ -28,43 +29,62 @@
         >15<small>H</small>45<small>M</small>37<small>S</small></span
       >
     </p>
-    <div class="container mx-auto mt-5">
-      <header class="flex items-center justify-between">
-        <nav>
+    <div class="container mx-auto mt-5 px-6 sm:px-0">
+      <header class="relative flex items-center justify-between">
+        <nav class="hidden sm:block">
           <ul class="flex gap-x-4">
             <li class="cursor-pointer">Man</li>
             <li class="cursor-pointer">Woman</li>
             <li class="cursor-pointer">Kids</li>
-            <li class="cursor-pointer">cadeau</li>
+            <li class="cursor-pointer">Gift</li>
           </ul>
         </nav>
         <div>
           <h1 class="text-4xl font-bold">Diane</h1>
         </div>
-        <nav>
+        <nav class="hidden sm:block">
           <ul class="flex items-center gap-x-5">
             <li class="cursor-pointer">
-              <i class="fa-solid fa-magnifying-glass text-xl"></i>
+              <i class="fa-solid fa-magnifying-glass fa-lg"></i>
             </li>
             <li class="cursor-pointer">
-              <i class="fa-solid fa-bag-shopping text-xl"></i>
+              <i class="fa-solid fa-bag-shopping fa-lg"></i>
             </li>
             <li class="cursor-pointer">
-              <i class="fa-solid fa-right-from-bracket text-xl"></i>
+              <i class="fa-solid fa-right-from-bracket fa-lg"></i>
             </li>
           </ul>
         </nav>
+        <div class="cursor-pointer px-4 py-2 sm:hidden" id="menuTrigger">
+          <i class="fa-solid fa-bars fa-xl" id="menuIcon"></i>
+          <i class="fa-solid fa-xmark !hidden fa-xl" id="crossIcon"></i>
+        </div>
+        <ul
+          class="absolute top-14 z-10 hidden w-full border-b bg-white py-2 *:px-6 *:py-2"
+          id="menu"
+        >
+          <li class="cursor-pointer border-l-4 hover:bg-gray-100">Home</li>
+          <li class="cursor-pointer hover:bg-gray-100">Man</li>
+          <li class="cursor-pointer hover:bg-gray-100">Woman</li>
+          <li class="cursor-pointer hover:bg-gray-100">Kids</li>
+          <li class="cursor-pointer hover:bg-gray-100">Gift</li>
+          <li class="cursor-pointer hover:bg-gray-100">Search</li>
+          <li class="cursor-pointer hover:bg-gray-100">Shopping</li>
+          <li class="cursor-pointer hover:bg-gray-100">Signin</li>
+        </ul>
       </header>
       <div
-        class="my-5 flex h-96 items-end justify-between rounded-3xl bg-[url('./assets/hero.jpg')] bg-cover bg-center p-6"
+        class="my-5 flex h-96 flex-col justify-end gap-y-4 rounded-3xl bg-[url('./assets/hero.jpg')] bg-cover bg-center p-6 md:flex-row md:items-end md:justify-between"
       >
         <section class="text-white">
-          <h2 class="mb-3 text-5xl font-medium uppercase">
+          <h2 class="mb-3 text-2xl font-medium uppercase sm:text-5xl">
             diane nature collection
           </h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </section>
-        <button class="rounded-full bg-white px-6 py-2 font-medium">
+        <button
+          class="self-end text-nowrap rounded-full bg-white px-6 py-2 font-medium"
+        >
           Buy now
         </button>
       </div>
@@ -73,79 +93,79 @@
         <p class="mb-6 text-center text-sm text-gray-600">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque!
         </p>
-        <div class="flex flex-wrap justify-center gap-4">
-          <article class="basis-96">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <article>
             <img
               src="./src/assets/product-1.jpg"
               alt="Manteau"
               class="h-80 w-full rounded-3xl object-cover"
             />
-            <h3 class="my-2 font-medium">Manteau</h3>
+            <h3 class="my-2 font-medium">Jacket</h3>
             <p class="mb-2 text-sm text-gray-600">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
               tempore!
             </p>
             <span class="font-bold">$45</span>
           </article>
-          <article class="basis-96">
+          <article>
             <img
               src="./src/assets/product-2.jpg"
               alt="Manteau"
               class="h-80 w-full rounded-3xl object-cover"
             />
-            <h3 class="my-2 font-medium">Manteau</h3>
+            <h3 class="my-2 font-medium">Teeshirt</h3>
             <p class="mb-2 text-sm text-gray-600">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
               tempore!
             </p>
             <span class="font-bold">$45</span>
           </article>
-          <article class="basis-96">
+          <article>
             <img
               src="./src/assets/product-3.jpg"
               alt="Manteau"
               class="h-80 w-full rounded-3xl object-cover"
             />
-            <h3 class="my-2 font-medium">Manteau</h3>
+            <h3 class="my-2 font-medium">Glasses</h3>
             <p class="mb-2 text-sm text-gray-600">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
               tempore!
             </p>
             <span class="font-bold">$45</span>
           </article>
-          <article class="basis-96">
+          <article>
             <img
               src="./src/assets/product-4.jpg"
               alt="Manteau"
               class="h-80 w-full rounded-3xl object-cover"
             />
-            <h3 class="my-2 font-medium">Manteau</h3>
+            <h3 class="my-2 font-medium">Shoes</h3>
             <p class="mb-2 text-sm text-gray-600">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
               tempore!
             </p>
             <span class="font-bold">$45</span>
           </article>
-          <article class="basis-96">
+          <article>
             <img
               src="./src/assets/product-5.jpg"
               alt="Manteau"
               class="h-80 w-full rounded-3xl object-cover"
             />
-            <h3 class="my-2 font-medium">Manteau</h3>
+            <h3 class="my-2 font-medium">Watches</h3>
             <p class="mb-2 text-sm text-gray-600">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
               tempore!
             </p>
             <span class="font-bold">$45</span>
           </article>
-          <article class="basis-96">
+          <article>
             <img
               src="./src/assets/product-6.jpg"
               alt="Manteau"
               class="h-80 w-full rounded-3xl object-cover"
             />
-            <h3 class="my-2 font-medium">Manteau</h3>
+            <h3 class="my-2 font-medium">Trousers</h3>
             <p class="mb-2 text-sm text-gray-600">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
               tempore!
@@ -168,7 +188,9 @@
           See details
         </button>
       </section>
-      <section class="mb-12 flex justify-center gap-2">
+      <section
+        class="mb-12 flex flex-col items-center justify-center gap-2 sm:flex-row"
+      >
         <div
           class="flex h-96 w-80 flex-col items-start justify-end rounded-3xl bg-[url('./assets/man.jpg')] bg-cover bg-center p-5"
         >
@@ -200,55 +222,63 @@
           </button>
         </div>
       </section>
-      <footer class="mb-20 flex justify-between">
-        <div class="w-1/2">
+      <footer
+        class="mb-10 flex flex-col justify-between gap-y-4 sm:mb-20 sm:flex-row sm:gap-x-4"
+      >
+        <div
+          class="flex w-full flex-col gap-y-2 sm:w-1/2 sm:flex-none sm:gap-y-3"
+        >
           <h2 class="text-3xl font-medium">Diane</h2>
-          <p class="my-4 text-sm text-gray-600">
+          <p class="text-sm text-gray-600">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
           </p>
-          <input
-            type="email"
-            placeholder="Your email"
-            class="mr-2 rounded-3xl border px-4 py-2"
-          />
-          <button
-            class="rounded-full bg-black px-6 py-2 font-medium text-white"
-          >
-            Submit
-          </button>
+          <div>
+            <input
+              type="email"
+              placeholder="Your email"
+              class="mb-2 rounded-3xl border px-4 py-2 sm:mr-2"
+            />
+            <button
+              class="rounded-full bg-black px-6 py-2 font-medium text-white"
+            >
+              Submit
+            </button>
+          </div>
         </div>
-        <div>
-          <h3 class="mb-3 font-bold">Category</h3>
-          <ul class="text-gray-600">
-            <li>Link</li>
-            <li>Link</li>
-            <li>Link</li>
-            <li>Link</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="mb-3 font-bold">Product</h3>
-          <ul class="text-gray-600">
-            <li>Link</li>
-            <li>Link</li>
-            <li>Link</li>
-            <li>Link</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="mb-3 font-bold">Social Media</h3>
-          <ul class="text-gray-600">
-            <li>Link</li>
-            <li>Link</li>
-            <li>Link</li>
-            <li>Link</li>
-          </ul>
+        <div class="flex justify-between gap-x-5">
+          <div>
+            <h3 class="mb-3 font-bold">Category</h3>
+            <ul class="text-gray-600">
+              <li>Link</li>
+              <li>Link</li>
+              <li>Link</li>
+              <li>Link</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="mb-3 font-bold">Product</h3>
+            <ul class="text-gray-600">
+              <li>Link</li>
+              <li>Link</li>
+              <li>Link</li>
+              <li>Link</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="mb-3 font-bold">Social Media</h3>
+            <ul class="text-gray-600">
+              <li>Link</li>
+              <li>Link</li>
+              <li>Link</li>
+              <li>Link</li>
+            </ul>
+          </div>
         </div>
       </footer>
     </div>
     <div class="flex justify-between bg-black px-4 pb-4 pt-1 text-gray-300">
       <p>Copyright © United Nations 2024</p>
-      <ul class="flex gap-x-3 text-sm">
+      <ul class="hidden gap-x-3 text-sm sm:flex">
         <li class="cursor-pointer">Terms and conditions</li>
         <li class="cursor-pointer">Legal stuff</li>
         <li class="cursor-pointer">We are hiring</li>
